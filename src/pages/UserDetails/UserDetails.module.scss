@@ -1,0 +1,86 @@
+@use "../../styles/variables" as *;
+
+.userDetail {
+  .userDetailsContainer {
+    // background-color: #fff;
+    // border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    // box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+  }
+
+  .backBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: none;
+    border: none;
+    color: #213f7d;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      color: #39cdcc;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .headerRight {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: $font-weight-medium;
+        color: $text-dark;
+      }
+
+      .actions {
+        display: flex;
+        gap: 1rem;
+
+        .btn {
+          padding: 0.6rem 1.5rem;
+          border-radius: 8px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          border: 1px solid transparent;
+          background: transparent;
+        }
+
+        .blacklist {
+          border-color: #e4033b;
+          color: #e4033b;
+
+          &:hover {
+            background-color: #ffe5ea;
+          }
+        }
+
+        .activate {
+          border-color: #39cdcc;
+          color: #39cdcc;
+
+          &:hover {
+            background-color: #e6fafa;
+          }
+        }
+      }
+    }
+  }
+}
