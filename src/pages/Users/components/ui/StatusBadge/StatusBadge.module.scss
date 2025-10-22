@@ -1,0 +1,32 @@
+
+@use "../../../../../styles/variables" as *;
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.active {
+  background-color: rgba($color-success, 0.15);
+  color: $color-success;
+}
+
+.pending {
+  background-color: rgba($color-warning, 0.15);
+  color: $color-warning;
+}
+
+.blacklisted {
+  background-color: rgba($color-error, 0.15);
+  color: $color-error;
+}
+
+.inactive {
+  background-color: rgba($color-muted, 0.15);
+  color: $color-muted;
+}

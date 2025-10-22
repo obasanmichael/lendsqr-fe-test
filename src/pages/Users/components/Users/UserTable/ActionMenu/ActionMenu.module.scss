@@ -1,0 +1,55 @@
+@use "../../../../../../styles/variables" as *;
+
+.menuWrapper {
+  position: relative;
+  margin: 0;
+  padding: 0
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: $bg-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-md;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 100;
+
+ .dropdownItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    color: $text-dark;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+
+    &:hover {
+      background-color: $bg-light;
+    }
+  }
+}

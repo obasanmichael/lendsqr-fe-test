@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+
+.usersPage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: $font-primary;
+}
+
+.header {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: $font-weight-medium;
+    color: $text-dark;
+  }
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: $bp-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tableSection {
+  background: $bg-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  padding: 1.5rem;
+}
+
+.tableTitle {
+  font-size: 1.125rem;
+  font-weight: $font-weight-medium;
+  color: $text-light;
+  margin-bottom: 1rem;
+}
