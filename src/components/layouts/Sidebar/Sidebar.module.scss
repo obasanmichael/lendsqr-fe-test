@@ -1,0 +1,110 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  padding: 1.2rem 0;
+  color: #213f7d;
+  overflow-y: auto;
+
+  .logoSection {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .logo {
+      display: block;
+      img {
+        height: 28px;
+        width: auto;
+      }
+    }
+  }
+
+  .orgSwitcher {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.5rem 0.6rem 1.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+
+    .orgIcon {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+    }
+    .switchText {
+      margin-right: 0.5rem;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .menu {
+    flex: 1;
+    overflow-y: auto;
+
+    .section {
+      margin-bottom: 1.5rem;
+
+      .sectionTitle {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #545f7d;
+        padding: 0rem 1.5rem;
+        letter-spacing: 0.04em;
+        font-weight: 600;
+      }
+
+      .sectionList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .link {
+          @include link-style;
+        }
+
+        .active {
+          background-color: lighten($color-primary, 45%);
+          border-left: 3px solid $color-primary;
+          font-weight: 100;
+          color: #213f7d;
+        }
+
+      }
+    }
+    .logoutSection {
+      border-top: 1px solid $color-border;
+      padding: 1rem 1.5rem;
+
+      .logoutButton {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: none;
+        border: none;
+        color: $text-dark;
+        font-weight: 300;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        .logoutText{
+            font-family: $font-primary;
+        }
+
+        &:hover {
+          color: $color-primary;
+          transform: translateX(2px);
+        }
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  &.collapsed {
+    width: 72px;
+    min-width: 72px;
+  }
+
+}
+
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .outlet {
+    flex: 1;
+    padding: 3rem;
+    overflow-y: auto;
+    background-color: #f9fafb;
+  }
+
+  .topbar{
+    padding: 0 3rem
+  }
+}
+
+// .sidebar.collapsed ~ .mainContent {
+//   margin-left: 72px;
+
+//   .topbar {
+//     left: 72px;
+//   }
+// }
+
+// src/components/layout/MainLayout.module.scss
+
+// .app {
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+// //   background: $bg-light; // from variables
+// }
+
+// /* Topbar sits at the top and spans full width.
+//    Keep it fixed or static as you prefer. We'll use fixed for persistence on scroll. */
+// .topbar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 80px;
+//   z-index: 100;
+// }
+
+// /* The layout below the topbar */
+// .layout {
+//   display: flex;
+//   width: 100%;
+//   margin-top: 80px; /* pushes the layout below the topbar */
+//   min-height: calc(100vh - 80px);
+// }
+
+// /* Sidebar */
+// .sidebar {
+//   width: 260px;
+//   min-width: 260px;
+//   background: #fff;
+//   border-right: 1px solid #e5e7eb;
+//   transition: width 0.25s ease;
+//   height: calc(100vh - 80px); /* full height minus topbar */
+//   overflow-y: auto;
+//   position: sticky;
+//   top: 80px; /* stays below the fixed topbar */
+
+//   &.collapsed {
+//     width: 72px;
+//     min-width: 72px;
+//   }
+// }
+
+// /* Main content (right of sidebar) */
+// .content {
+//   flex: 1;
+//   padding: 2rem;
+// //   background: $bg-light;
+//   min-height: calc(100vh - 80px);
+//   overflow-y: auto;
+// }
+
+// /* ===== Responsive: mobile behaviour ===== */
+@media (max-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    // left: -260px;
+    // top: 80px;
+    height: 100vh;
+    z-index: 90;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* when sidebar is overlayed, content still occupies full width */
+  .content {
+    padding: 1rem;
+  }
+}
+
+// @media (max-width: 768px) {
+//   .topbar {
+//     height: 68px;
+//   }
+//   .layout {
+//     margin-top: 68px;
+//     min-height: calc(100vh - 68px);
+//   }
+//   .sidebar {
+//     top: 68px;
+//     height: calc(100vh - 68px);
+//   }
+// }

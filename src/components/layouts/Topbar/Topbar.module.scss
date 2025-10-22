@@ -1,0 +1,178 @@
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+//   padding:  2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+//search section 
+
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+
+/* Pill-shaped combined input + button */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; // allow wide desktop view, but not full width
+  min-width: 220px;
+  background: #ffffff;
+  border: 1px solid #dfe3eb; // subtle border as requested
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Left: input area (no right border) */
+.searchInput {
+  flex: 1;
+  border: none;
+  background: #ffffff;
+  padding: 0.72rem 1rem;
+  font-size: 0.95rem;
+  color: #213f7d;
+  font-family: "Work Sans", "Avenir Next", sans-serif;
+
+  &::placeholder {
+    color: #9aa3b2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #39cdcc; 
+  border: none;
+  padding: 0 0.85rem;
+  height: 100%;
+  cursor: pointer;
+
+  img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1); /* white icon */
+    display: block;
+  }
+
+  &:hover {
+    background-color: #32b8b0;
+  }
+}
+
+
+
+
+//right section
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  .docsLink {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #213f7d;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .username {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #213f7d;
+    }
+
+    .caret {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+//responsiveness 
+@media (max-width: 1024px) {
+  .searchWrapper {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    height: 80px;
+  }
+
+  .left {
+    .logo {
+      display: none; // hide logo on mobile
+    }
+
+    .menuButton {
+      display: block; // show hamburger
+    }
+  }
+
+  .searchWrapper {
+    width: 160px;
+
+    .searchInput {
+      padding-right: 2.2rem;
+    }
+  }
+
+  .right {
+    gap: 1rem;
+
+    .docsLink {
+      display: none; // hide Docs link on mobile
+    }
+
+    .username {
+      display: none; // optional: hide username for mobile tight layout
+    }
+  }
+}
