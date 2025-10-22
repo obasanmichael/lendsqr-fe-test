@@ -1,0 +1,23 @@
+@use './variables' as *;
+
+// _mixins.scss
+@mixin link-style {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  color: lighten($text-dark, 35%);
+  transition: all 0.15s ease;
+
+  .icon {
+    width: 16px;
+    height: 12.8px;
+    color: lighten($text-dark, 35%);
+  }
+
+  &:hover {
+    background-color: #f3f6f9;
+  }
+
+}

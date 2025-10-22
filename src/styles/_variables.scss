@@ -1,0 +1,84 @@
+//colors
+$color-primary: #39cdcc; // Lendsqr greenish-blue
+$color-primary-dark: #30b5b5;
+$color-accent: #213f7d;
+
+$bg-light: #f9fafb;
+$bg-lessWhite: #fdfdfd;
+$bg-white: #ffffff;
+$color-border: #e5e7eb;
+$text-dark: #213f7d;
+$border-light: #dfe3eb;
+$text-light: #545f7d;
+$color-placeholder: #a0aec0;
+$color-error: #e4033b;
+$color-success: #39cd62;
+$color-warning: #fbbd23;
+$color-muted: #545F7D;
+
+
+// 🖋 TYPOGRAPHY
+// ==========================
+$font-primary: "Work Sans", sans-serif;
+$font-secondary: "Avenir Next", sans-serif;
+
+$font-size-sm: 0.875rem;  // 14px
+$font-size-base: 1rem;    // 16px
+$font-size-lg: 1.125rem;  // 18px
+$font-size-xl: 1.25rem;   // 20px
+$font-size-2xl: 1.5rem;   // 24px
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ==========================
+// 📏 SPACING SYSTEM
+// (helps keep consistent padding/margins)
+// ==========================
+$space-xs: 0.25rem;  // 4px
+$space-sm: 0.5rem;   // 8px
+$space-md: 1rem;     // 16px
+$space-lg: 1.5rem;   // 24px
+$space-xl: 2rem;     // 32px
+$space-2xl: 3rem;    // 48px
+
+// ==========================
+// 🧱 BORDER & RADIUS
+// ==========================
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// ==========================
+// 🌫 SHADOWS
+// ==========================
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+// ==========================
+// 🔁 TRANSITIONS
+// ==========================
+$transition-fast: all 0.2s ease;
+$transition-medium: all 0.3s ease;
+$transition-slow: all 0.5s ease;
+
+
+// ==========================
+// 📚 Z-INDEX SCALE
+// ==========================
+$z-sidebar: 50;
+$z-topbar: 100;
+$z-modal: 200;
+$z-tooltip: 300;
+
+
+// 📱 BREAKPOINTS
+// ==========================
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+$bp-2xl: 1536px;
