@@ -32,9 +32,7 @@ export const UserDetailsTabs: React.FC<UserDetailsTabsProps> = ({ user }) => {
   return (
     <>
       <div className={styles.profileTabs}>
-        <UserProfileCard
-user={user}
-        />
+        <UserProfileCard user={user} />
         <div className={styles.tabHeaders}>
           {TAB_LIST.map((tab) => (
             <button

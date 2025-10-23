@@ -11,11 +11,13 @@
 
   .tabHeaders {
     padding: 0 2rem;
+    
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .tabButton {
