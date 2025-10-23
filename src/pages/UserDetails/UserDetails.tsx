@@ -2,14 +2,25 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./UserDetails.module.scss";
 import BackIcon from "../../assets/icons/np_back.svg"; // replace with your arrow icon
 import { UserDetailsTabs } from "./components/UserDetailsTabs";
-import users from "../../data/users.json";
-import type { User } from "../../types/types";
+// import users from "../../data/users.json";
+// import type { User } from "../../types/types";
+import useUsersStore from "../../store/useUsersStore";
 
 export default function UserDetail() {
   const navigate = useNavigate();
-  const { id } = useParams<{ id: string }>();
+    const { id } = useParams<{ id: string }>();
+    const { selectedUser } = useUsersStore();
 
-  const user = users.find((u) => u.id === Number(id)) as User;
+      if (!selectedUser || selectedUser.id !== Number(id)) {
+        setTimeout(() => navigate("/users"), 1500);
+        return (
+          <div className={styles.userDetails}>
+            <p>No user selected. Redirecting...</p>
+          </div>
+        );
+      }
+    const user = selectedUser;
+//   const user = users.find((u) => u.id === Number(id)) as User;
 
 
   return (

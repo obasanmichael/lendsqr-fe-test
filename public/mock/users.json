@@ -233,5 +233,241 @@
       "email": "tunde.adeleke@gmail.com",
       "relationship": "Husband"
     }
+  },
+  {
+    "id": 6,
+    "organization": "Opay Nigeria",
+    "username": "seun.ajayi",
+    "email": "seun.ajayi@opay.com",
+    "phone": "+2348123456700",
+    "date": "Mar 02, 2022 04:10 PM",
+    "status": "Pending",
+    "profile": {
+      "name": "Seun Ajayi",
+      "uniqueId": "USR-10234",
+      "tier": 2,
+      "balance": "₦220,500.00",
+      "bank": "Zenith Bank",
+      "acctNo": "2087654321"
+    },
+    "personalInfo": {
+      "fullName": "Seun Ajayi",
+      "email": "seun.ajayi@opay.com",
+      "phone": "+2348123456700",
+      "bvn": 22789012345,
+      "gender": "Male",
+      "maritalStatus": "Single",
+      "children": "None",
+      "residence": "Surulere, Lagos"
+    },
+    "education": {
+      "level": "OND",
+      "employmentStatus": "Self-Employed",
+      "sector": "Retail",
+      "duration": "2 years",
+      "officeEmail": "ajayi.seun@opay.com",
+      "income": "₦100,000 - ₦200,000",
+      "loanRepayment": "₦10,000"
+    },
+    "socials": {
+      "twitter": "@seun_ajayi",
+      "facebook": "facebook.com/seun.ajayi",
+      "instagram": "@seun.ajayi"
+    },
+    "guarantor": {
+      "fullName": "Taiwo Ajayi",
+      "phone": "+2348085671234",
+      "email": "taiwo.ajayi@gmail.com",
+      "relationship": "Brother"
+    }
+  },
+  {
+    "id": 7,
+    "organization": "Carbon",
+    "username": "esther.ogunleye",
+    "email": "esther.ogunleye@carbon.com",
+    "phone": "+2347039876543",
+    "date": "Aug 15, 2022 01:45 PM",
+    "status": "Active",
+    "profile": {
+      "name": "Esther Ogunleye",
+      "uniqueId": "USR-11245",
+      "tier": 3,
+      "balance": "₦970,430.80",
+      "bank": "Fidelity Bank",
+      "acctNo": "1109876543"
+    },
+    "personalInfo": {
+      "fullName": "Esther Ogunleye",
+      "email": "esther.ogunleye@carbon.com",
+      "phone": "+2347039876543",
+      "bvn": 22980123456,
+      "gender": "Female",
+      "maritalStatus": "Married",
+      "children": "1",
+      "residence": "Ikorodu, Lagos"
+    },
+    "education": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Finance",
+      "duration": "6 years",
+      "officeEmail": "e.ogunleye@carbon.com",
+      "income": "₦500,000 - ₦800,000",
+      "loanRepayment": "₦55,000"
+    },
+    "socials": {
+      "twitter": "@estherogunleye",
+      "facebook": "facebook.com/esther.ogunleye",
+      "instagram": "@esther.ogunleye"
+    },
+    "guarantor": {
+      "fullName": "Kunle Ogunleye",
+      "phone": "+2348067891234",
+      "email": "kunle.ogunleye@gmail.com",
+      "relationship": "Husband"
+    }
+  },
+  {
+    "id": 8,
+    "organization": "PiggyVest",
+    "username": "daniel.akpan",
+    "email": "daniel.akpan@piggyvest.com",
+    "phone": "+2348069012345",
+    "date": "Dec 11, 2020 12:30 PM",
+    "status": "Blacklisted",
+    "profile": {
+      "name": "Daniel Akpan",
+      "uniqueId": "USR-12256",
+      "tier": 1,
+      "balance": "₦55,220.00",
+      "bank": "Polaris Bank",
+      "acctNo": "3034567890"
+    },
+    "personalInfo": {
+      "fullName": "Daniel Akpan",
+      "email": "daniel.akpan@piggyvest.com",
+      "phone": "+2348069012345",
+      "bvn": 22901234567,
+      "gender": "Male",
+      "maritalStatus": "Single",
+      "children": "None",
+      "residence": "Uyo, Akwa Ibom"
+    },
+    "education": {
+      "level": "HND",
+      "employmentStatus": "Employed",
+      "sector": "Technology",
+      "duration": "1 year",
+      "officeEmail": "d.akpan@piggyvest.com",
+      "income": "₦120,000 - ₦180,000",
+      "loanRepayment": "₦20,000"
+    },
+    "socials": {
+      "twitter": "@danielakpan",
+      "facebook": "facebook.com/daniel.akpan",
+      "instagram": "@daniel.akpan"
+    },
+    "guarantor": {
+      "fullName": "John Akpan",
+      "phone": "+2348056789123",
+      "email": "john.akpan@gmail.com",
+      "relationship": "Brother"
+    }
+  },
+  {
+    "id": 9,
+    "organization": "Palmpay",
+    "username": "grace.okeke",
+    "email": "grace.okeke@palmpay.com",
+    "phone": "+2348091234567",
+    "date": "Oct 01, 2023 03:10 PM",
+    "status": "Pending",
+    "profile": {
+      "name": "Grace Okeke",
+      "uniqueId": "USR-13467",
+      "tier": 2,
+      "balance": "₦300,840.00",
+      "bank": "Sterling Bank",
+      "acctNo": "1098765432"
+    },
+    "personalInfo": {
+      "fullName": "Grace Okeke",
+      "email": "grace.okeke@palmpay.com",
+      "phone": "+2348091234567",
+      "bvn": 23012345678,
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "children": "None",
+      "residence": "Enugu, Enugu State"
+    },
+    "education": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Fintech",
+      "duration": "2 years",
+      "officeEmail": "g.okeke@palmpay.com",
+      "income": "₦200,000 - ₦350,000",
+      "loanRepayment": "₦25,000"
+    },
+    "socials": {
+      "twitter": "@graceokeke",
+      "facebook": "facebook.com/grace.okeke",
+      "instagram": "@grace.okeke"
+    },
+    "guarantor": {
+      "fullName": "Adaobi Okeke",
+      "phone": "+2348039876543",
+      "email": "ada.okeke@yahoo.com",
+      "relationship": "Sister"
+    }
+  },
+  {
+    "id": 10,
+    "organization": "TeamApt",
+    "username": "tobi.adeyemi",
+    "email": "tobi.adeyemi@teamapt.com",
+    "phone": "+2348012345678",
+    "date": "Jul 10, 2021 10:20 AM",
+    "status": "Active",
+    "profile": {
+      "name": "Tobi Adeyemi",
+      "uniqueId": "USR-14578",
+      "tier": 3,
+      "balance": "₦780,000.00",
+      "bank": "FCMB",
+      "acctNo": "2012345678"
+    },
+    "personalInfo": {
+      "fullName": "Tobi Adeyemi",
+      "email": "tobi.adeyemi@teamapt.com",
+      "phone": "+2348012345678",
+      "bvn": 23123456789,
+      "gender": "Male",
+      "maritalStatus": "Single",
+      "children": "None",
+      "residence": "Abule Egba, Lagos"
+    },
+    "education": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Technology",
+      "duration": "5 years",
+      "officeEmail": "t.adyemi@teamapt.com",
+      "income": "₦400,000 - ₦600,000",
+      "loanRepayment": "₦35,000"
+    },
+    "socials": {
+      "twitter": "@tobiadeyemi",
+      "facebook": "facebook.com/tobi.adeyemi",
+      "instagram": "@tobi.adeyemi"
+    },
+    "guarantor": {
+      "fullName": "Segun Adeyemi",
+      "phone": "+2348081234567",
+      "email": "segun.adeyemi@gmail.com",
+      "relationship": "Father"
+    }
   }
+
 ]

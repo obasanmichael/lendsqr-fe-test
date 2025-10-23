@@ -3,13 +3,27 @@ import styles from "./UserTable.module.scss";
 import StatusBadge from "../../ui/StatusBadge/StatusBadge";
 import ActionMenu from "./ActionMenu/ActionMenu";
 import FilterIcon from '../../../../../assets/icons/filter-button.svg';
-import users from '../../../../../data/users.json';
-import type { User } from "../../../../../types/types";
+// import users from '../../../../../data/users.json';
+import { useUsers } from "../../../../../hooks/useUsers";
+import useUsersStore from "../../../../../store/useUsersStore";
 
 
 const UserTable: React.FC = () => {
-    const typedUsers = users as User[];
-    // const navigate = useNavigate();
+    const { data: users, isLoading, isError } = useUsers();
+    const { currentPage, setCurrentPage, search } = useUsersStore();
+
+      const PAGE_SIZE = 10;
+
+      if (isLoading) return <div>Loading users...</div>;
+      if (isError) return <div>Failed to load users.</div>;
+
+      const typedUsers = (users ?? []).filter((u) =>
+        u.username.toLowerCase().includes(search.toLowerCase())
+      );
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const paginatedUsers = typedUsers.slice(start, start + PAGE_SIZE);
+    const totalPages = Math.ceil(typedUsers.length / PAGE_SIZE);
+    
   return (
     <div className={styles.tableWrapper}>
       <table className={styles.table}>
@@ -41,10 +55,9 @@ const UserTable: React.FC = () => {
         </thead>
 
         <tbody>
-          {typedUsers.map((user, idx) => (
+          {paginatedUsers.map((user, idx) => (
             <tr
               key={idx}
-            //   onClick={() => navigate(`/users/${user.id}`)}
               style={{ cursor: "pointer" }}
             >
               <td>{user.organization}</td>
@@ -56,12 +69,25 @@ const UserTable: React.FC = () => {
                 <StatusBadge status={user.status as any} />
               </td>
               <td>
-                <ActionMenu userId={user.id} />
+                <ActionMenu user={user} />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <div className={styles.pagination}>
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            className={`${styles.pageBtn} ${
+              page === currentPage ? styles.active : ""
+            }`}
+          >
+            {page}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };

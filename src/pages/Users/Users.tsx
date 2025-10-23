@@ -14,9 +14,8 @@ const Users = () => {
         {stats.map((item) => (
           <UserStatsCard key={item.id} {...item} />
         ))}
-      </div>
-
-      {/* Table Section (next step) */}
+          </div>
+          
       <div className={styles.tableSection}>
         <UserTable />
       </div>

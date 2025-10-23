@@ -1,32 +1,31 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import DotIcon from '../../../../../../assets/icons/dots-icon.svg';
 import styles from './ActionMenu.module.scss';
 import ViewIcon from '../../../../../../assets/icons/view-details.svg';
 import BlacklistIcon from '../../../../../../assets/icons/blacklist-user.svg';
 import ActivateIcon from '../../../../../../assets/icons/activate-user.svg';
 import { useNavigate } from 'react-router-dom';
+import type { User } from '../../../../../../types/types';
+import useUsersStore from '../../../../../../store/useUsersStore';
 
 interface Props {
     onViewDetails?: () => void;
     onBlacklist?: () => void;
     onActivate?: () => void;
-    userId?: number;
+    user?: User;
 }
 
-const ActionMenu = ({ userId, onBlacklist, onActivate }: Props) => {
+const ActionMenu = ({ user, onBlacklist, onActivate }: Props) => {
     const navigate = useNavigate();
-    const [open, setOpen] = useState(false)
-    const menuRef = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false)
+  const { setSelectedUser } = useUsersStore();
+  const menuRef = useRef<HTMLDivElement>(null);
+  
+    const handleViewDetails = () => {
+      setSelectedUser(user!); 
+      navigate(`/users/${user?.id}`);
+    };
 
-    useEffect(() => {
-      const handleClickOutside = (e: MouseEvent) => {
-        if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-          setOpen(false);
-        }
-      };
-      document.addEventListener("click", handleClickOutside);
-      return () => document.removeEventListener("click", handleClickOutside);
-    }, []);
 
     return (
       <div className={styles.menuWrapper} ref={menuRef}>
@@ -36,7 +35,7 @@ const ActionMenu = ({ userId, onBlacklist, onActivate }: Props) => {
         {open && (
           <div className={styles.dropdown}>
             <button
-              onClick={() => navigate(`/users/${userId}`)}
+              onClick={handleViewDetails}
               className={styles.dropdownItem}
             >
               <img src={ViewIcon} alt="" />
