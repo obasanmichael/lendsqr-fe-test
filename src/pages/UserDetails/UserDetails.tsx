@@ -1,9 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./UserDetails.module.scss";
-import BackIcon from "../../assets/icons/np_back.svg"; // replace with your arrow icon
+import BackIcon from "../../assets/icons/np_back.svg"; 
 import { UserDetailsTabs } from "./components/UserDetailsTabs";
-// import users from "../../data/users.json";
-// import type { User } from "../../types/types";
+
 import useUsersStore from "../../store/useUsersStore";
 
 export default function UserDetail() {
@@ -20,7 +19,6 @@ export default function UserDetail() {
         );
       }
     const user = selectedUser;
-//   const user = users.find((u) => u.id === Number(id)) as User;
 
 
   return (
@@ -50,12 +48,3 @@ export default function UserDetail() {
   );
 }
 
-{
-  /* <UserProfileCard
-            name="Grace Effiom"
-            uniqueId="LSQFf587g90"
-            tier={1}
-            balance="₦200,000.00"
-            bankDetails="Providus Bank / 1234567890"
-              /> */
-}
