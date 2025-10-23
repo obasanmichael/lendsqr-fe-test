@@ -2,6 +2,8 @@
 import axios from "axios";
 
 export const axiosClient = axios.create({
-  baseURL: "/", // serves mock files from public/
-  headers: { "Content-Type": "application/json" },
+  baseURL: "https://my.api.mockaroo.com", 
+  headers: {
+    "X-API-Key": "c6ad28e0",
+  },
 });
