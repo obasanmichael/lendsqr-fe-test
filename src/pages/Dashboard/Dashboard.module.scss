@@ -1,0 +1,108 @@
+@use '/src/styles/variables' as *;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #f9fafb;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $text-dark;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+    color: $text-light;
+  }
+
+  h1 p {
+    margin: 0;
+    padding: 0;
+  }
+
+
+}
+
+/* SECTIONS */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #213f7d;
+    }
+
+    .sectionInfo {
+      font-size: 1rem;
+      color: #39cdcc;
+    }
+  }
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .cardHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .cardTitle {
+      color: #213f7d;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .cardValue {
+      color: #213f7d;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+
+  .metrics {
+    list-style: none;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      color: #545f7d;
+      font-size: 0.85rem;
+    }
+  }
+}
