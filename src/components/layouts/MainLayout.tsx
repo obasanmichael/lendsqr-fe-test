@@ -6,7 +6,7 @@ import styles from "./MainLayout.module.scss";
 import { useState } from "react";
 
 const MainLayout = ({ children }: { children?: React.ReactNode }) => {
-    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+    // const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
     const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
   return (
@@ -14,12 +14,11 @@ const MainLayout = ({ children }: { children?: React.ReactNode }) => {
       <aside
         className={`
         ${styles.sidebar} 
-        ${isSidebarCollapsed ? styles.collapsed : ""} 
         ${isMobileSidebarOpen ? styles.mobileOpen : ""}
       `}
       >
         <Sidebar
-          onToggle={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+        //   onToggle={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
           onCloseMobile={() => setIsMobileSidebarOpen(false)}
         />
       </aside>
@@ -41,3 +40,5 @@ const MainLayout = ({ children }: { children?: React.ReactNode }) => {
 };
 
 export default MainLayout;
+
+        // ${isSidebarCollapsed ? styles.collapsed : ""} 
