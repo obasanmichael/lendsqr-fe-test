@@ -19,7 +19,7 @@ const Sidebar = ({  onCloseMobile }: Props) => {
     const handleLogout = () => {
         clearUser();
         toast.success("Logged out successfully", { icon: "🚪" });
-        navigate('/login');
+        navigate('/');
     }
   return (
     <nav className={styles.sidebar} aria-label="Main Navigation">
