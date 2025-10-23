@@ -18,7 +18,10 @@ const MainLayout = ({ children }: { children?: React.ReactNode }) => {
         ${isMobileSidebarOpen ? styles.mobileOpen : ""}
       `}
       >
-        <Sidebar onToggle={() => setIsSidebarCollapsed(!isSidebarCollapsed)} />
+        <Sidebar
+          onToggle={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+          onCloseMobile={() => setIsMobileSidebarOpen(false)}
+        />
       </aside>
       {isMobileSidebarOpen && (
         <div

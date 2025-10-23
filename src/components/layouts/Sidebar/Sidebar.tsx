@@ -10,9 +10,10 @@ import toast from "react-hot-toast";
 import { PanelLeftClose } from "lucide-react";
 
 interface Props {
-  onToggle?: () => void;
+    onToggle?: () => void;
+    onCloseMobile?: () => void;
 }
-const Sidebar = ({ onToggle }: Props) => {
+const Sidebar = ({ onToggle, onCloseMobile }: Props) => {
     const clearUser = useUserStore(state => state.clearUser);
     const navigate = useNavigate();
     
@@ -56,6 +57,11 @@ const Sidebar = ({ onToggle }: Props) => {
                       className={({ isActive }) =>
                         `${styles.link} ${isActive ? styles.active : ""}`
                       }
+                      onClick={() => {
+                        if (window.innerWidth <= 1024 && onCloseMobile) {
+                          onCloseMobile(); 
+                        }
+                      }}
                     >
                       <img
                         src={iconSrc}
