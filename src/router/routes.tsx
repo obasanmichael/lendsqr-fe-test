@@ -6,7 +6,7 @@ import Users from "../pages/Users/Users";
 import UserDetails from "../pages/UserDetails/UserDetails";
 
 export const router = createBrowserRouter([
-  { path: "/login", element: <Login /> },
+  { path: "/", element: <Login /> },
   {
     path: "/",
     element: <MainLayout />,
