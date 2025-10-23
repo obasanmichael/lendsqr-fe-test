@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./UserTable.module.scss";
-import { mockUsers } from "../../../../../constants/mockUsers";
 import StatusBadge from "../../ui/StatusBadge/StatusBadge";
 import ActionMenu from "./ActionMenu/ActionMenu";
 import FilterIcon from '../../../../../assets/icons/filter-button.svg';
-// import { useNavigate } from "react-router-dom";
+import users from '../../../../../data/users.json';
+import type { User } from "../../../../../types/types";
 
 
 const UserTable: React.FC = () => {
+    const typedUsers = users as User[];
     // const navigate = useNavigate();
   return (
     <div className={styles.tableWrapper}>
@@ -40,7 +41,7 @@ const UserTable: React.FC = () => {
         </thead>
 
         <tbody>
-          {mockUsers.map((user, idx) => (
+          {typedUsers.map((user, idx) => (
             <tr
               key={idx}
             //   onClick={() => navigate(`/users/${user.id}`)}

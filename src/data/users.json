@@ -1,0 +1,237 @@
+[
+  {
+    "id": 1,
+    "organization": "Lendsqr Technologies",
+    "username": "adeolu.b",
+    "email": "adeolu.balogun@lendsqr.com",
+    "phone": "+2348134567890",
+    "date": "Apr 30, 2020 10:00 AM",
+    "status": "Active",
+    "profile": {
+      "name": "Adeolu Balogun",
+      "uniqueId": "USR-23489",
+      "tier": 2,
+      "balance": "₦540,200.75",
+      "bank": "GTBank",
+      "acctNo": "0123456789"
+    },
+    "personalInfo": {
+      "fullName": "Adeolu Balogun",
+      "email": "adeolu.balogun@lendsqr.com",
+      "phone": "+2348134567890",
+      "bvn": 22344566789,
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "children": "2",
+      "residence": "Lekki Phase 1, Lagos"
+    },
+    "education": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Technology",
+      "duration": "3 years",
+      "officeEmail": "adeolu.b@lendsqr.com",
+      "income": "₦250,000 - ₦500,000",
+      "loanRepayment": "₦40,000"
+    },
+    "socials": {
+      "twitter": "@adeolu_b",
+      "facebook": "facebook.com/adeolu.balogun",
+      "instagram": "@adeolu.balogun"
+    },
+    "guarantor": {
+      "fullName": "Bola Balogun",
+      "phone": "+2348021234567",
+      "email": "bola.balogun@gmail.com",
+      "relationship": "Wife"
+    }
+  },
+  {
+    "id": 2,
+    "organization": "Paystack",
+    "username": "chinenye.uzo",
+    "email": "chinenye.uzo@paystack.com",
+    "phone": "+2347061234567",
+    "date": "Jan 12, 2021 02:35 PM",
+    "status": "Pending",
+    "profile": {
+      "name": "Chinenye Uzor",
+      "uniqueId": "USR-82351",
+      "tier": 1,
+      "balance": "₦120,540.00",
+      "bank": "Access Bank",
+      "acctNo": "0678123456"
+    },
+    "personalInfo": {
+      "fullName": "Chinenye Uzor",
+      "email": "chinenye.uzo@paystack.com",
+      "phone": "+2347061234567",
+      "bvn": 22456789012,
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "children": "None",
+      "residence": "Gwarinpa, Abuja"
+    },
+    "education": {
+      "level": "M.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Finance",
+      "duration": "1 year",
+      "officeEmail": "c.uzo@paystack.com",
+      "income": "₦100,000 - ₦200,000",
+      "loanRepayment": "₦15,000"
+    },
+    "socials": {
+      "twitter": "@chinenyeuzo",
+      "facebook": "facebook.com/chinenye.uzo",
+      "instagram": "@chinenye.uzo"
+    },
+    "guarantor": {
+      "fullName": "Uche Uzor",
+      "phone": "+2348095678910",
+      "email": "uche.uzor@yahoo.com",
+      "relationship": "Brother"
+    }
+  },
+  {
+    "id": 3,
+    "organization": "Flutterwave",
+    "username": "micheal.okafor",
+    "email": "m.okafor@flutterwave.com",
+    "phone": "+2348023456789",
+    "date": "Nov 03, 2022 09:45 AM",
+    "status": "Inactive",
+    "profile": {
+      "name": "Micheal Okafor",
+      "uniqueId": "USR-55671",
+      "tier": 3,
+      "balance": "₦870,340.10",
+      "bank": "Providus Bank",
+      "acctNo": "1034567890"
+    },
+    "personalInfo": {
+      "fullName": "Micheal Okafor",
+      "email": "m.okafor@flutterwave.com",
+      "phone": "+2348023456789",
+      "bvn": 22567891234,
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "children": "1",
+      "residence": "Maryland, Lagos"
+    },
+    "education": {
+      "level": "HND",
+      "employmentStatus": "Self-Employed",
+      "sector": "Consulting",
+      "duration": "5 years",
+      "officeEmail": "m.okafor@flutterwave.com",
+      "income": "₦500,000 - ₦700,000",
+      "loanRepayment": "₦60,000"
+    },
+    "socials": {
+      "twitter": "@michealokafor",
+      "facebook": "facebook.com/micheal.okafor",
+      "instagram": "@micheal.okafor"
+    },
+    "guarantor": {
+      "fullName": "Ngozi Okafor",
+      "phone": "+2348093345567",
+      "email": "ngozi.okafor@gmail.com",
+      "relationship": "Sister"
+    }
+  },
+  {
+    "id": 4,
+    "organization": "Kuda Microfinance Bank",
+    "username": "hassan.musa",
+    "email": "hassan.musa@kuda.com",
+    "phone": "+2348057891234",
+    "date": "Jun 21, 2021 08:30 AM",
+    "status": "Blacklisted",
+    "profile": {
+      "name": "Hassan Musa",
+      "uniqueId": "USR-67291",
+      "tier": 2,
+      "balance": "₦43,980.65",
+      "bank": "First Bank",
+      "acctNo": "3045678901"
+    },
+    "personalInfo": {
+      "fullName": "Hassan Musa",
+      "email": "hassan.musa@kuda.com",
+      "phone": "+2348057891234",
+      "bvn": 22890123456,
+      "gender": "Male",
+      "maritalStatus": "Single",
+      "children": "None",
+      "residence": "Zaria, Kaduna"
+    },
+    "education": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Banking",
+      "duration": "2 years",
+      "officeEmail": "h.musa@kuda.com",
+      "income": "₦80,000 - ₦150,000",
+      "loanRepayment": "₦25,000"
+    },
+    "socials": {
+      "twitter": "@hassanmusa",
+      "facebook": "facebook.com/hassan.musa",
+      "instagram": "@hassan.musa"
+    },
+    "guarantor": {
+      "fullName": "Amina Musa",
+      "phone": "+2348071234567",
+      "email": "amina.musa@yahoo.com",
+      "relationship": "Mother"
+    }
+  },
+  {
+    "id": 5,
+    "organization": "Moniepoint",
+    "username": "ifeoma.adeleke",
+    "email": "ifeoma.adeleke@moniepoint.com",
+    "phone": "+2348105672345",
+    "date": "Feb 10, 2023 11:25 AM",
+    "status": "Active",
+    "profile": {
+      "name": "Ifeoma Adeleke",
+      "uniqueId": "USR-90231",
+      "tier": 1,
+      "balance": "₦310,720.00",
+      "bank": "UBA",
+      "acctNo": "2098765432"
+    },
+    "personalInfo": {
+      "fullName": "Ifeoma Adeleke",
+      "email": "ifeoma.adeleke@moniepoint.com",
+      "phone": "+2348105672345",
+      "bvn": 22789123456,
+      "gender": "Female",
+      "maritalStatus": "Married",
+      "children": "3",
+      "residence": "Ikeja GRA, Lagos"
+    },
+    "education": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Fintech",
+      "duration": "4 years",
+      "officeEmail": "i.adeleke@moniepoint.com",
+      "income": "₦300,000 - ₦600,000",
+      "loanRepayment": "₦35,000"
+    },
+    "socials": {
+      "twitter": "@ifeomaadeleke",
+      "facebook": "facebook.com/ifeoma.adeleke",
+      "instagram": "@ifeoma.adeleke"
+    },
+    "guarantor": {
+      "fullName": "Tunde Adeleke",
+      "phone": "+2348023456789",
+      "email": "tunde.adeleke@gmail.com",
+      "relationship": "Husband"
+    }
+  }
+]

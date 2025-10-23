@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./UserDetailsTabs.module.scss";
-import GeneralDetails from "./GeneralDetails";
 import { UserProfileCard } from "./UserProfileCard";
+import { GeneralDetails } from "./GeneralDetails";
+import type { User } from "../../../types/types";
 
 const TAB_LIST = [
   "General Details",
@@ -13,7 +14,7 @@ const TAB_LIST = [
 ];
 
 interface UserDetailsTabsProps {
-  user: any;
+  user: User;
 }
 
 export const UserDetailsTabs: React.FC<UserDetailsTabsProps> = ({ user }) => {
@@ -32,24 +33,20 @@ export const UserDetailsTabs: React.FC<UserDetailsTabsProps> = ({ user }) => {
     <>
       <div className={styles.profileTabs}>
         <UserProfileCard
-          name="Grace Effiom"
-          uniqueId="LSQFf587g90"
-          tier={1}
-          balance="₦200,000.00"
-          bankDetails="Providus Bank / 1234567890"
+user={user}
         />
         <div className={styles.tabHeaders}>
-            {TAB_LIST.map((tab) => (
-              <button
-                key={tab}
-                className={`${styles.tabButton} ${
-                  activeTab === tab ? styles.active : ""
-                }`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </button>
-            ))}
+          {TAB_LIST.map((tab) => (
+            <button
+              key={tab}
+              className={`${styles.tabButton} ${
+                activeTab === tab ? styles.active : ""
+              }`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
       </div>
 

@@ -3,23 +3,16 @@ import styles from "./UserProfileCard.module.scss";
 import StarFilled from "../../../assets/icons/star-filled.svg";
 import StarOutline from "../../../assets/icons/star-unfilled.svg";
 import DefaultAvatar from "../../../assets/icons/userProfile.svg";
+import type { User } from "../../../types/types";
 
 interface UserProfileCardProps {
-  name: string;
-  uniqueId: string;
-  tier: number; //for the user
-  balance: string;
-  bankDetails: string;
-  avatar?: string;
+    avatar?: string;
+    user: User;
 }
 
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({
-  name,
-  uniqueId,
-  tier,
-  balance,
-  bankDetails,
-  avatar,
+avatar,
+  user,
 }) => {
   const stars = [1, 2, 3];
 
@@ -29,13 +22,13 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
         <div className={styles.avatarContainer}>
           <img
             src={avatar || DefaultAvatar}
-            alt={`${name} avatar`}
+            alt={`${user.profile.name} avatar`}
             className={styles.avatar}
           />
         </div>
         <div className={styles.userInfo}>
-          <h2>{name}</h2>
-          <p>{uniqueId}</p>
+          <h2>{user.profile.name}</h2>
+          <p>{user.profile.uniqueId}</p>
         </div>
       </div>
       <div className={styles.divider} />
@@ -45,7 +38,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
           {stars.map((star) => (
             <img
               key={star}
-              src={star <= tier ? StarFilled : StarOutline}
+              src={star <= user.profile.tier ? StarFilled : StarOutline}
               alt=""
               className={styles.star}
             />
@@ -54,8 +47,12 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
       </div>
       <div className={styles.divider} />
       <div className={styles.right}>
-        <h3>{balance}</h3>
-        <p>{bankDetails}</p>
+        <h3>{user.profile.balance}</h3>
+        <p>
+                  <span>{user.profile.bank} / </span>
+                  <span>{user.profile.acctNo }</span>
+                  
+        </p>
       </div>
     </div>
   );

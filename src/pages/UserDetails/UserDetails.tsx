@@ -1,52 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./UserDetails.module.scss";
 import BackIcon from "../../assets/icons/np_back.svg"; // replace with your arrow icon
 import { UserDetailsTabs } from "./components/UserDetailsTabs";
+import users from "../../data/users.json";
+import type { User } from "../../types/types";
 
 export default function UserDetail() {
   const navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
 
-      const user = {
-        id: "USR-001",
-        name: "Grace Effiom",
-        username: "gracee",
-        email: "gracee@gmail.com",
-        phone: "08012345678",
-        organization: "Lendsqr",
-        dateJoined: "May 15, 2020",
-        status: "Active",
-        avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-        tier: 2,
-        accountBalance: "₦400,000.00",
-        accountNumber: "1234567890 / Providus Bank",
-        personalInfo: {
-          fullName: "Grace Effiom",
-          gender: "Female",
-          maritalStatus: "Single",
-          children: "None",
-          residence: "Lekki, Lagos",
-        },
-        education: {
-          level: "B.Sc",
-          employmentStatus: "Employed",
-          sector: "Finance",
-          duration: "2 years",
-          officeEmail: "grace.effiom@lendsqr.com",
-          income: "₦200,000 - ₦500,000",
-          loanRepayment: "₦40,000/month",
-        },
-        socials: {
-          twitter: "@gracee",
-          facebook: "facebook.com/gracee",
-          instagram: "@gracee",
-        },
-        guarantor: {
-          fullName: "Tunde Effiom",
-          phone: "08098765432",
-          email: "tunde.effiom@gmail.com",
-          relationship: "Brother",
-        },
-      };
+  const user = users.find((u) => u.id === Number(id)) as User;
+
 
   return (
     <div className={styles.userDetail}>
@@ -69,18 +33,18 @@ export default function UserDetail() {
         </div>
       </div>
       <div className={styles.userDetailsContainer}>
-              <UserDetailsTabs user={user} />
+        <UserDetailsTabs user={user} />
       </div>
     </div>
   );
 }
 
-          {
-            /* <UserProfileCard
+{
+  /* <UserProfileCard
             name="Grace Effiom"
             uniqueId="LSQFf587g90"
             tier={1}
             balance="₦200,000.00"
             bankDetails="Providus Bank / 1234567890"
               /> */
-          }
+}
