@@ -6,16 +6,40 @@
   flex-direction: column;
   height: 100%;
   background-color: #fff;
+  transition: transform 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+//    z-index: 50;
   padding: 1.2rem 0;
   color: #213f7d;
   overflow-y: auto;
 
+  &.open {
+    transform: translateX(0);
+  }
+
+  &.collapsed {
+    transform: translateX(-100%);
+  }
+
+  @media (max-width: $bp-lg) {
+    position: sticky;
+    transform: translateX(0);
+  }
+
   .logoSection {
+    display: flex;
+    justify-content: space-between;
     padding: 1rem 1.5rem;
     margin-bottom: 1.5rem;
 
+    .collapse{
+        cursor: pointer;
+    }
+
     .logo {
-      display: block;
+    //   display: block;
       img {
         height: 28px;
         width: auto;

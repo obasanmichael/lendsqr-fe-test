@@ -1,11 +1,10 @@
-
+@use '/src/styles/variables' as *;
 
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-//   padding:  2rem;
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
@@ -14,12 +13,30 @@
   z-index: 50;
 }
 
-//search section 
+//search section
 
 .searchWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 400px;
+
+  .menuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 1rem 0 0;
+    padding:0;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
 }
 
 /* Pill-shaped combined input + button */
@@ -27,10 +44,10 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 400px; // allow wide desktop view, but not full width
+  max-width: 400px;
   min-width: 220px;
   background: #ffffff;
-  border: 1px solid #dfe3eb; // subtle border as requested
+  border: 1px solid #dfe3eb;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -57,7 +74,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #39cdcc; 
+  background-color: #39cdcc;
   border: none;
   padding: 0 0.85rem;
   height: 100%;
@@ -74,9 +91,6 @@
     background-color: #32b8b0;
   }
 }
-
-
-
 
 //right section
 
@@ -134,10 +148,14 @@
   }
 }
 
-//responsiveness 
+//responsiveness
 @media (max-width: 1024px) {
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+  }
   .searchWrapper {
-    width: 250px;
+    width: 350px;
   }
 }
 
@@ -148,20 +166,16 @@
 
   .left {
     .logo {
-      display: none; // hide logo on mobile
+      display: none; 
     }
 
     .menuButton {
-      display: block; // show hamburger
+      display: block; 
     }
   }
 
   .searchWrapper {
-    width: 160px;
-
-    .searchInput {
-      padding-right: 2.2rem;
-    }
+    width: 350px;
   }
 
   .right {
@@ -170,9 +184,27 @@
     .docsLink {
       display: none; // hide Docs link on mobile
     }
-
-    .username {
-      display: none; // optional: hide username for mobile tight layout
+    .iconButton{
+        display: none;
     }
+
   }
+}
+
+@media (max-width: $bp-sm){
+    
+    .searchWrapper{
+        width: 220px;
+    }
+    .searchInput{
+        padding: 0.5rem 0.5rem;
+        // width: 10px;
+    }
+    .searchButton{
+        padding: 0 0.5rem;
+    }
+    .username{
+        display: none;
+    }
+
 }

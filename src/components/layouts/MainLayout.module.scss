@@ -1,3 +1,5 @@
+@use '/src/styles/variables' as *;
+
 .layout {
   display: flex;
   height: 100vh;
@@ -20,8 +22,36 @@
     min-width: 72px;
   }
 
+  @media (max-width: 1024px) {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    z-index: 60;
+    transition: left 0.3s ease;
+
+    &.mobileOpen {
+      left: 0; // Slide in when open
+    }
+  }
+
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 40;
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
 
 .mainContent {
   flex: 1;
@@ -33,82 +63,31 @@
     padding: 3rem;
     overflow-y: auto;
     background-color: #f9fafb;
+
+     @media (max-width: $bp-lg){
+        padding: 1rem 1rem;
+    }
+    @media(max-width: $bp-sm){
+        padding: 0 0.7rem;
+    }
   }
 
   .topbar{
-    padding: 0 3rem
+    padding: 0 3rem;
+
+    @media (max-width: $bp-lg){
+        padding: 0 1rem;
+    }
+    @media(max-width: $bp-sm){
+        padding: 0 0.7rem;
+    }
   }
 }
-
-// .sidebar.collapsed ~ .mainContent {
-//   margin-left: 72px;
-
-//   .topbar {
-//     left: 72px;
-//   }
-// }
-
-// src/components/layout/MainLayout.module.scss
-
-// .app {
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-// //   background: $bg-light; // from variables
-// }
-
-// /* Topbar sits at the top and spans full width.
-//    Keep it fixed or static as you prefer. We'll use fixed for persistence on scroll. */
-// .topbar {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   height: 80px;
-//   z-index: 100;
-// }
-
-// /* The layout below the topbar */
-// .layout {
-//   display: flex;
-//   width: 100%;
-//   margin-top: 80px; /* pushes the layout below the topbar */
-//   min-height: calc(100vh - 80px);
-// }
-
-// /* Sidebar */
-// .sidebar {
-//   width: 260px;
-//   min-width: 260px;
-//   background: #fff;
-//   border-right: 1px solid #e5e7eb;
-//   transition: width 0.25s ease;
-//   height: calc(100vh - 80px); /* full height minus topbar */
-//   overflow-y: auto;
-//   position: sticky;
-//   top: 80px; /* stays below the fixed topbar */
-
-//   &.collapsed {
-//     width: 72px;
-//     min-width: 72px;
-//   }
-// }
-
-// /* Main content (right of sidebar) */
-// .content {
-//   flex: 1;
-//   padding: 2rem;
-// //   background: $bg-light;
-//   min-height: calc(100vh - 80px);
-//   overflow-y: auto;
-// }
 
 // /* ===== Responsive: mobile behaviour ===== */
 @media (max-width: 1024px) {
   .sidebar {
     position: fixed;
-    // left: -260px;
-    // top: 80px;
     height: 100vh;
     z-index: 90;
   }
@@ -117,22 +96,8 @@
     left: 0;
   }
 
-  /* when sidebar is overlayed, content still occupies full width */
   .content {
     padding: 1rem;
   }
 }
 
-// @media (max-width: 768px) {
-//   .topbar {
-//     height: 68px;
-//   }
-//   .layout {
-//     margin-top: 68px;
-//     min-height: calc(100vh - 68px);
-//   }
-//   .sidebar {
-//     top: 68px;
-//     height: calc(100vh - 68px);
-//   }
-// }

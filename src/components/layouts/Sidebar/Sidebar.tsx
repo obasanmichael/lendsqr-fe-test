@@ -7,6 +7,7 @@ import logout from '../../../assets/icons/log-out.svg'
 import logo from "../../../assets/logo.svg";
 import useUserStore from "../../../store/userStore";
 import toast from "react-hot-toast";
+import { PanelLeftClose } from "lucide-react";
 
 interface Props {
   onToggle?: () => void;
@@ -25,7 +26,8 @@ const Sidebar = ({ onToggle }: Props) => {
       <div className={styles.logoSection}>
         <Link to={"/dashboard"}>
           <img src={logo} alt="Lendsqr" className={styles.logo} />
-        </Link>
+              </Link>
+              <PanelLeftClose className={styles.collapse} onClick={onToggle} />
       </div>
       <div className={styles.orgSwitcher}>
         <img

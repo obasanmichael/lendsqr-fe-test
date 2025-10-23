@@ -5,15 +5,23 @@ import CaretIcon from "../../../assets/icons/caret-down.svg";
 import Avatar from "../../../assets/avatar.png";
 import { cn } from "../../../utils/cn";
 import useUserStore from "../../../store/userStore";
+import { MenuIcon } from "lucide-react";
 
 interface Props {
   className?: string;
+  onMenuClick: () => void;
 }
-const Topbar = ({ className }: Props) => {
+const Topbar = ({ className, onMenuClick }: Props) => {
   const user = useUserStore(state => state.user)
   return (
     <header className={cn(styles.topbar, className)}>
       <div className={styles.searchWrapper}>
+        <button
+          className={styles.menuButton}
+          onClick={onMenuClick}
+        >
+          <MenuIcon />
+        </button>
         <div
           className={styles.searchContainer}
           role="search"
