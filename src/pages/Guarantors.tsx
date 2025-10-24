@@ -1,4 +1,3 @@
-import React from 'react'
 import AccessRestricted from '../components/AccessRestricted';
 
 const Guarantors = () => {
