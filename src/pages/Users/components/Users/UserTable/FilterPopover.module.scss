@@ -1,0 +1,65 @@
+@use '/src/styles/variables' as *;
+.filterPopover {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 1.2rem;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  label {
+    font-size: 0.85rem;
+    color: $text-light;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0rem;
+    gap: 0.25rem;
+    text-transform: none;
+  }
+
+  input,
+  select {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    outline: none;
+
+    &:focus {
+      border-color: #39cdcc;
+    }
+  }
+
+  .buttonRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    .resetBtn {
+        width: 100%;
+      border: 1px solid #545f7d;
+      color: #545f7d;
+      border-radius: 6px;
+      background: transparent;
+      padding: 12px 30px;
+      cursor: pointer;
+    }
+
+    .filterBtn {
+        width: 100%;
+      background: #39cdcc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  }
+}
