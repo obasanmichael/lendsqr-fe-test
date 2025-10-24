@@ -8,7 +8,13 @@
   @media (max-width: $bp-md) {
     grid-template-columns: 1fr;
     width: auto;
-    padding: 4rem;
+    padding: 2rem;
+    background-color: $bg-white;
+  }
+   @media (max-width: $bp-sm) {
+    grid-template-columns: 1fr;
+    width: auto;
+    padding: 1.5rem;
     background-color: $bg-white;
   }
 
