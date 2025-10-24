@@ -15,8 +15,8 @@ const UserTable: React.FC = () => {
 
       const PAGE_SIZE = 10;
 
-      if (isLoading) return <div>Loading users...</div>;
-      if (isError) return <div>Failed to load users.</div>;
+      if (isLoading) return <div className={styles.loadingDiv}>Loading users...</div>;
+      if (isError) return <div className={styles.failedDiv}>Failed to load users.</div>;
 
       const typedUsers = (users ?? []).filter((u) =>
         u.username.toLowerCase().includes(search.toLowerCase())

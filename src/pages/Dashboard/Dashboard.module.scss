@@ -2,7 +2,7 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   background-color: #f9fafb;
 }
 .header {
@@ -21,9 +21,9 @@
     color: $text-light;
   }
 
-  h1 p {
+  h1, p {
     margin: 0;
-    padding: 0;
+    padding: 0.5rem 0;
   }
 
 
