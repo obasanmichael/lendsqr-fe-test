@@ -3,6 +3,8 @@ import styles from "./UserDetailsTabs.module.scss";
 import { UserProfileCard } from "./UserProfileCard";
 import { GeneralDetails } from "./GeneralDetails";
 import type { User } from "../../../types/types";
+import BankDetails from "./BankDetails";
+import LoansDetails from "./LoansDetails";
 
 const TAB_LIST = [
   "General Details",
@@ -24,6 +26,10 @@ export const UserDetailsTabs: React.FC<UserDetailsTabsProps> = ({ user }) => {
     switch (activeTab) {
       case "General Details":
         return <GeneralDetails user={user} />;
+      case "Bank Details":
+        return <BankDetails user={user} />
+      case "Loans":
+        return <LoansDetails user={user} />
       default:
         return <div className={styles.emptyState}>No data available yet.</div>;
     }
