@@ -19,12 +19,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
+:root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   --toastify-color-success: #39cdcc;
   --toastify-font-family: "Work Sans", sans-serif;
+  --skeleton-base-color: #e9eef7;
+  --skeleton-highlight-color: #f6f8fb;
 }
 
 .avenir {

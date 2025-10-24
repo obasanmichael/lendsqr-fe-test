@@ -8,6 +8,7 @@ import { useUsers } from "../../../../../hooks/useUsers";
 import useUsersStore from "../../../../../store/useUsersStore";
 import Pagination from "../Pagination";
 import FilterPopover from "./FilterPopover";
+import UserTableSkeleton from "./UserTableSkeleton";
 
 const UserTable: React.FC = () => {
   const { data: users, isLoading, isError } = useUsers();
@@ -54,8 +55,7 @@ const UserTable: React.FC = () => {
 
   const PAGE_SIZE = 10;
 
-  if (isLoading)
-    return <div className={styles.loadingDiv}>Loading users...</div>;
+if (isLoading) return <UserTableSkeleton />;
   if (isError)
     return <div className={styles.failedDiv}>Failed to load users.</div>;
 
