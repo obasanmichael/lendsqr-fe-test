@@ -6,6 +6,7 @@ import FilterIcon from '../../../../../assets/icons/filter-button.svg';
 // import users from '../../../../../data/users.json';
 import { useUsers } from "../../../../../hooks/useUsers";
 import useUsersStore from "../../../../../store/useUsersStore";
+import Pagination from "../Pagination";
 
 
 const UserTable: React.FC = () => {
@@ -25,68 +26,61 @@ const UserTable: React.FC = () => {
     const totalPages = Math.ceil(typedUsers.length / PAGE_SIZE);
     
   return (
-    <div className={styles.tableWrapper}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            {[
-              "Organization",
-              "Username",
-              "Email",
-              "Phone Number",
-              "Date Joined",
-              "Status",
-            ].map((header) => (
-              <th key={header}>
-                <div className={styles.thContent}>
-                  <span>{header}</span>
-                  <button
-                    type="button"
-                    className={styles.filterButton}
-                    aria-label={`Filter by ${header}`}
-                  >
-                    <img src={FilterIcon} alt="" />
-                  </button>
-                </div>
-              </th>
-            ))}
-            <th></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {paginatedUsers.map((user, idx) => (
-            <tr
-              key={idx}
-              style={{ cursor: "pointer" }}
-            >
-              <td>{user.organization}</td>
-              <td>{user.username}</td>
-              <td>{user.email}</td>
-              <td>{user.phone}</td>
-              <td>{user.date}</td>
-              <td>
-                <StatusBadge status={user.status as any} />
-              </td>
-              <td>
-                <ActionMenu user={user} />
-              </td>
+    <div className={styles.tableSection}>
+      <div className={styles.tableWrapper}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              {[
+                "Organization",
+                "Username",
+                "Email",
+                "Phone Number",
+                "Date Joined",
+                "Status",
+              ].map((header) => (
+                <th key={header}>
+                  <div className={styles.thContent}>
+                    <span>{header}</span>
+                    <button
+                      type="button"
+                      className={styles.filterButton}
+                      aria-label={`Filter by ${header}`}
+                    >
+                      <img src={FilterIcon} alt="" />
+                    </button>
+                  </div>
+                </th>
+              ))}
+              <th></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className={styles.pagination}>
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <button
-            key={page}
-            onClick={() => setCurrentPage(page)}
-            className={`${styles.pageBtn} ${
-              page === currentPage ? styles.active : ""
-            }`}
-          >
-            {page}
-          </button>
-        ))}
+          </thead>
+
+          <tbody>
+            {paginatedUsers.map((user, idx) => (
+              <tr key={idx} style={{ cursor: "pointer" }}>
+                <td>{user.organization}</td>
+                <td>{user.username}</td>
+                <td>{user.email}</td>
+                <td>{user.phone}</td>
+                <td>{user.date}</td>
+                <td>
+                  <StatusBadge status={user.status as any} />
+                </td>
+                <td>
+                  <ActionMenu user={user} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className={styles.paginationSection}>
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          onChange={setCurrentPage}
+        />
       </div>
     </div>
   );

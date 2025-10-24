@@ -1,0 +1,53 @@
+@use '/src/styles/variables' as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  margin-top: 0rem;
+}
+
+.pageBtn{
+    border: none;
+    color: $text-light;
+  padding: 0.1rem 0.4rem;
+    background: $bg-light;
+
+}
+.navBtn {
+  border: 1px solid $color-border;
+  background: lighten($text-light, 50%);
+  color: $text-light;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background:#E8FDFD;
+    color: $color-primary;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.active {
+  color: $color-primary;
+}
+
+.ellipsis {
+  padding: 0 0.4rem;
+  color: $text-light;
+  font-weight: 600;
+}
+
+.paginationSection {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
