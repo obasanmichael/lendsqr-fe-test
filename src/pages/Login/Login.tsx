@@ -83,7 +83,7 @@ const Login = () => {
                 {...register("password")}
               />
               <button
-                type="button"
+                type="button" 
                 onClick={() => setShowPassword(!showPassword)}
                 className={styles.showToggle}
               >
